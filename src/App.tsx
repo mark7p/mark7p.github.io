@@ -4,8 +4,7 @@ import './App.css'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import Menu from './components/Menu/Menu'
-import Privacy from './components/NoteCraftr/Privacy/Privacy'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router,  } from 'react-router-dom'
 
 function App() {
   useEffect(() => {
@@ -31,7 +30,6 @@ function App() {
     <Router>
       <Menu></Menu>
       <Home></Home>
-      {/* <Privacy></Privacy> */}
       <Footer></Footer>
     </Router>
   )
