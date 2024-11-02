@@ -4,7 +4,8 @@ import './App.css'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import Menu from './components/Menu/Menu'
-import { BrowserRouter as Router,  } from 'react-router-dom'
+import { Routes, Route  } from 'react-router-dom'
+import Privacy from './components/NoteCraftr/Privacy/Privacy'
 
 function App() {
   useEffect(() => {
@@ -20,18 +21,21 @@ function App() {
   }, [])
 
   function handleMouseEvent(e: MouseEvent) {
-    const mousePos = {x: e.clientX, y: e.clientY};
+    const mousePos = {x: e.pageX, y: e.pageY};
     const pressed = e.buttons !== 0;
-    const backgroundStyle = `radial-gradient(${pressed ? 650 : 600}px at ${mousePos.x}px ${mousePos.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+    const backgroundStyle = `radial-gradient(${pressed ? 650 : 600}px at ${mousePos.x}px ${mousePos.y}px, rgba(27, 66, 66, 0.15), transparent 80%)`;
     document.body.style.background = backgroundStyle;
   }
 
   return (
-    <Router>
+    <>
       <Menu></Menu>
-      <Home></Home>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/notecraftr-privacy" element={<Privacy></Privacy>}></Route>
+        </Routes>
       <Footer></Footer>
-    </Router>
+    </>
   )
 }
 

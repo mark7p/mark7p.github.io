@@ -6,7 +6,7 @@ function Footer() {
 
 
   return (
-    <footer className="footer">
+    <footer className="footer border-t border-custom-teal-50/50 ">
       <p>© {currentYear} - mark7p</p>
     </footer>
   )

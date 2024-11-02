@@ -2,7 +2,7 @@
 
 function Privacy() {
     return (
-        <div className="text-left p-2">
+        <div className="text-left p-5 pb-20 max-w-2xl">
             <h1 className="text-4xl">Privacy Policy for NoteCraftr</h1>
             <p className="pb-5 text-white/65">Last updated: November 02, 2024</p>
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>

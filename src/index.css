@@ -2,24 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: white;
-  background-color: #000000;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
 #root{
   display: flex;
-  height: 100vh;
   width: 100vw;
   flex-direction: column;
   padding: 0rem !important;
@@ -49,11 +49,11 @@ body {
 }
 
 ::-moz-selection {
-  color: rgb(16, 35, 75);
-  background: rgba(83, 204, 252, 0.705);
+  color: var(--selection-color);
+  background: var(--selection-bg)
 }
 
 ::selection {
-  color: rgb(16, 35, 75);
-  background: rgba(83, 204, 252, 0.705);
+  color: theme('colors.custom-teal.300');
+  background: theme('colors.custom-teal.100');
 }

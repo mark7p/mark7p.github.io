@@ -5,121 +5,73 @@ var languages = [
   {
     name: "Angular",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-      />
+      <i className="devicon-angular-plain text-[8rem]"></i>
     ),
   },
   {
     name: "React",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-      />
+      <i className="devicon-react-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Vue",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
-      />
+      <i className="devicon-vuejs-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Python",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-      />
+      <i className="devicon-python-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Typescript",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-      />
+      <i className="devicon-typescript-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Javascript",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-      />
+      <i className="devicon-javascript-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Tauri",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tauri/tauri-original.svg"
-      />
+      <i className="devicon-tauri-plain text-[8rem]"></i>
     ),
   },
   {
     name: "HTML",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-      />
+      <i className="devicon-html5-plain text-[8rem]"></i>
     ),
   },
   {
     name: "CSS",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-      />
+      <i className="devicon-css3-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Tailwind",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-      />
+      <i className="devicon-tailwindcss-plain text-[8rem]"></i>
     ),
   },
   {
     name: "MySQL",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-      />
+      <i className="devicon-mysql-plain text-[8rem]"></i>
     ),
   },
   {
     name: "Git",
     image: (
-      <img
-        className="w-32 h-32 select-disable"
-        draggable="false"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-      />
+      <i className="devicon-git-plain text-[8rem]"></i>
     ),
   },
 ];
@@ -134,7 +86,7 @@ export function MaterialSymbolsArrowBackIosNew(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        fill="white"
+        fill="currentColor"
         d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225z"
       ></path>
     </svg>
@@ -151,7 +103,7 @@ export function MaterialSymbolsArrowForwardIos(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <path
-        fill="white"
+        fill="currentColor"
         d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z"
       ></path>
     </svg>
@@ -189,18 +141,22 @@ function LanguagesWidget() {
   }
 
   return (
-    <div className="flex gap-2 items-center flex-shrink-0">
+    <div className="flex gap-2 items-center flex-shrink-0 hover:text-custom-teal-100">
       <button
-        className="mybutton decrease w-8 h-8 justify-items-center items-center rounded-full hover:bg-white/5 active:bg-white/10"
+        className="mybutton decrease w-8 h-8 justify-items-center items-center rounded-full hover:bg-custom-teal-200/10 active:bg-custom-teal-200/20"
         onClick={() => decreaseLanguageIndex()}
         onMouseEnter={() => setButtonHovered(true)}
         onMouseLeave={() => setButtonHovered(false)}
       >
         <MaterialSymbolsArrowBackIosNew></MaterialSymbolsArrowBackIosNew>
       </button>
-      {activeLanguage.image}
+      <div className="logo-container flex flex-col gap-2 ">
+        {activeLanguage.image}
+      <span className="select-disable text-custom-teal-50/70">{activeLanguage.name}</span>
+      </div>
+
       <button
-        className="mybutton increase w-8 h-8 justify-items-center items-center rounded-full hover:bg-white/5 active:bg-white/10"
+        className="mybutton increase w-8 h-8 justify-items-center items-center rounded-full hover:bg-custom-teal-200/10 active:bg-custom-teal-200/20"
         onClick={() => increaseLanguageIndex()}
         onMouseEnter={() => setButtonHovered(true)}
         onMouseLeave={() => setButtonHovered(false)}
