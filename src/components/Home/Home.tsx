@@ -5,7 +5,7 @@ import ProjectShowcase from "./ProjectsShowcase/ProjectsShowcase";
 function Home() {
   return (
     <>
-      <div className="flex body h-[calc(100vh-5rem)] gap-y-12 content-center justify-center px-2 gap-4 flex-wrap">
+      <div className="flex body h-[calc(100vh-5rem)] gap-y-12 content-center justify-center px-5 gap-4 flex-wrap">
         <div className="intro-text flex flex-col flex-grow w-min min-w-96 max-w-3xl">
           <h1 className="name text-6xl pb-2 text-left font-extrabold ">
             Gen Mark Paniterce
