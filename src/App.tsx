@@ -30,10 +30,10 @@ function App() {
   return (
     <>
       <Menu></Menu>
-        <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/notecraftr-privacy" element={<Privacy></Privacy>}></Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/notecraftr-privacy" element={<Privacy></Privacy>}></Route>
+          </Routes>
       <Footer></Footer>
     </>
   )
