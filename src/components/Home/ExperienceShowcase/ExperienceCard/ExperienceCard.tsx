@@ -21,7 +21,7 @@ export default function ExperienceCard({experience}: { experience: ExperienceCar
             </div> 
             <div className="flex flex-col experience-info text-left min-w-[12rem] max-w-[30rem]">
                 <h2 className="text-xl pb-2 font-bold">{experience.title}</h2>
-                <a href={experience.link} target="_blank" rel="noopener noreferrer" className="text-md pb-2 font-medium text-custom-teal-50/70 hover:text-custom-teal-50">{experience.company}</a>
+                <a href={experience.link} target="_blank" rel="noopener noreferrer" className="text-md pb-2 font-medium text-custom-teal-50 hover:text-custom-teal-100">{experience.company}</a>
                 <p className="text-md w-full text-custom-teal-50/70 text-balance">{experience.description}</p>
                 <div className="tags-container flex gap-2 pt-3 flex-wrap">
                     {experience.tags.map((tag: string, i: number) => {

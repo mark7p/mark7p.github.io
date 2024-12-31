@@ -53,7 +53,7 @@ export default function ExperienceShowcase() {
   return (
     <div className="border-t gap-3 flex flex-col border-custom-teal-50/50  items-center p-5 pb-20">
       <h1 className="text-3xl font-bold">My Experience</h1>
-      <h2 className="text-lg font-medium text-custom-teal-50/70">
+      <h2 className="text-lg font-medium text-custom-teal-50/70 pb-5">
         Here are some of the companies I have worked with
       </h2>
       <div className="flex flex-col gap-3">

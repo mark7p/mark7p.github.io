@@ -47,7 +47,7 @@ export default function ProjectShowcase() {
         // </div>
         <div className="min-h-[100vh] border-t gap-3 flex flex-col border-custom-teal-50/50  items-center p-2">
             <h1 className="text-3xl font-bold">Things I’ve Built</h1>
-            <h2 className="text-lg font-medium text-custom-teal-50/70">A Mix of Projects That Challenge and Inspire Me</h2>
+            <h2 className="text-lg font-medium text-custom-teal-50/70 pb-5">A mix of projects that challenge and inspire me</h2>
             {
                 projects.map((project: ProjectCardProps) => {
                     return <ProjectCard project={project} key={project.id}></ProjectCard>
