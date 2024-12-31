@@ -1,3 +1,4 @@
+import ExperienceShowcase from "./ExperienceShowcase/ExperienceShowcase";
 import "./Home.css";
 import LanguagesWidget from "./LanguagesWidget/LanguagesWidget";
 import ProjectShowcase from "./ProjectsShowcase/ProjectsShowcase";
@@ -18,6 +19,7 @@ function Home() {
         </div>
         <LanguagesWidget></LanguagesWidget>
       </div>
+      <ExperienceShowcase></ExperienceShowcase>
       <ProjectShowcase></ProjectShowcase>
     </>
   );

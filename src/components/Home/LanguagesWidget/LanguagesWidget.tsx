@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { SVGProps } from "react";
 
-var languages = [
+const languages = [
   {
     name: "Angular",
     image: (
@@ -39,6 +39,12 @@ var languages = [
     ),
   },
   {
+    name: "Django",
+    image: (
+      <i className="devicon-djangorest-plain text-[8rem]"></i>
+    ),
+  },
+  {
     name: "Tauri",
     image: (
       <i className="devicon-tauri-plain text-[8rem]"></i>
@@ -72,6 +78,12 @@ var languages = [
     name: "Git",
     image: (
       <i className="devicon-git-plain text-[8rem]"></i>
+    ),
+  },
+  {
+    name: "Godot",
+    image: (
+      <i className="devicon-godot-plain text-[8rem]"></i>
     ),
   },
 ];
@@ -111,9 +123,9 @@ export function MaterialSymbolsArrowForwardIos(props: SVGProps<SVGSVGElement>) {
 }
 
 function LanguagesWidget() {
-  var [languageIndex, setLanguageIndex] = useState(0);
-  var [buttonHovered, setButtonHovered] = useState(false);
-  var activeLanguage = useMemo(
+  const [languageIndex, setLanguageIndex] = useState(0);
+  const [buttonHovered, setButtonHovered] = useState(false);
+  const activeLanguage = useMemo(
     () => languages[languageIndex],
     [languageIndex, languages]
   );
