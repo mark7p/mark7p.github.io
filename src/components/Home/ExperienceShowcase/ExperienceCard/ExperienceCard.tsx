@@ -2,7 +2,7 @@ export type ExperienceCardProps = {
     id: number;
     title: string;
     company: string;
-    jobType: "Part-Time" | "Full-Time" | "Contract" | "Internship";
+    jobType: "Part-Time" | "Full-Time" | "Contract" | "Internship" | "Freelance";
     jobLocation: "Remote" | "On-Site" | "Hybrid";
     dateStarted: string;
     link?: string,
